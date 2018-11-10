@@ -1,5 +1,9 @@
 # Nest.js Docker VScode Debugging
 
+This recipe shows how to run and debug a VS Code Nest.js, Full Stack TypeScript Framework, project in a Docker container.
+
+The recipe assumes that you have a recent version of Docker installed.
+
 ## Step 1. Create a New App
 
 With the following commands, create the directory (`nest-js-app`) and files for the app.
