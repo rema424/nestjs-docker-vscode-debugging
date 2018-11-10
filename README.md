@@ -201,6 +201,7 @@ For the test operation, add some codes into the `src/app.service.ts` and set bre
 Run the app in debugging mode:
 
 ```
+npm run build
 npm run debug
 ```
 
