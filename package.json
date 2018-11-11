@@ -5,7 +5,7 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "debug": "concurrently \"tsc -w -p .\" \"nodemon -L --config nodemon-docker-debug.json\"",
+    "debug": "nodemon -L --config nodemon-docker-debug.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
@@ -33,7 +33,6 @@
     "@types/jest": "^23.3.1",
     "@types/node": "^10.7.1",
     "@types/supertest": "^2.0.5",
-    "concurrently": "^4.0.1",
     "jest": "^23.5.0",
     "nodemon": "^1.18.3",
     "prettier": "^1.14.2",

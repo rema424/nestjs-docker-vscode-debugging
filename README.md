@@ -72,6 +72,9 @@ coverage
 # Dependency directories
 node_modules/
 
+# Output files
+dist
+
 # dotenv environment variables file
 .env
 ```
@@ -123,12 +126,6 @@ You should see the `Hello world!` message.
 
 ## Step 2. Set up the debugging environment
 
-With the following commands, install a necessary module.
-
-```
-npm i -D concurrently
-```
-
 With the following commands, create the directory (`.vscode`) and files for debugging.
 
 ```
@@ -168,7 +165,8 @@ Add the following to the `launch.json` file:
       "address": "localhost",
       "localRoot": "${workspaceFolder}",
       "remoteRoot": "/nest",
-      "protocol": "inspector"
+      "protocol": "inspector",
+      "restart": true
     }
   ]
 }
@@ -181,7 +179,7 @@ Add the following to the `nodemon-docker-debug.json` file:
   "watch": ["src"],
   "ext": "ts",
   "ignore": ["src/**/*.spec.ts"],
-  "exec": "node --inspect=0.0.0.0 ./dist/main.js"
+  "exec": "tsc && node --inspect=0.0.0.0 ./dist/main.js"
 }
 ```
 
@@ -189,7 +187,7 @@ Add the following line into the scripts block of the `package.json` file:
 
 ```
 "scripts": {
-  "debug": "concurrently \"tsc -w -p .\" \"nodemon -L --config nodemon-docker-debug.json\"",
+  "debug": "nodemon -L --config nodemon-docker-debug.json",
 
 }
 ```

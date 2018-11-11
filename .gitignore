@@ -15,5 +15,8 @@ coverage
 # Dependency directories
 node_modules/
 
+# Output files
+dist
+
 # dotenv environment variables file
 .env

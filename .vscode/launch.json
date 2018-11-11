@@ -12,7 +12,8 @@
       "address": "localhost",
       "localRoot": "${workspaceFolder}",
       "remoteRoot": "/nest",
-      "protocol": "inspector"
+      "protocol": "inspector",
+      "restart": true
     }
   ]
 }
