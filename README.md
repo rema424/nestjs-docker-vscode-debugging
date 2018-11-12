@@ -11,7 +11,7 @@ With the following commands, create the directory (`nest-js-app`) and files for 
 ```
 mkdir nest-js-app && cd nest-js-app
 git init
-touch .gitignore Dockerfile docker-compose.yml .dockerignore
+touch .gitignore Dockerfile docker-compose.yml .dockerignore .gitignore
 ```
 
 The app directory structure should be:
